@@ -8,6 +8,15 @@ var pokemonList = []
 
 for (let i = 0; i < pokemonList.length; i++){
     var item = pokemonList[i];
-    console.log(item.name + ' - height: ' + item.height);
-    document.write(pokemonList[i]);
+    document.write(pokemonList[i].name + ' height: ' + pokemonList[i].height + '<br>');
+}
+
+const heightThreshold = 70;
+
+for (let i=0; i < pokemonList.length; i++) {
+    var pokemonString = pokemonList[i].name + " height: " + pokemonList[i].height + "-";
+    if (pokemonList[i].height > heightThreshold) {
+        pokemonString += " Wow, that is big!";
+    }
+    document.write(pokemonString + "<br>");
 }
