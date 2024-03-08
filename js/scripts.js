@@ -38,7 +38,7 @@ function add(item) {
     if(typeof item === 'object' && item !== null) {
         pokemonList.push(item);
     } else {
-        console.error( 'Pokemon incorrect');
+        console.error('Pokemon incorrect');
     }
 }
 
