@@ -17,12 +17,39 @@ pokemonList.forEach(pokemon => {
     console.log('name: ${pokemon.name}, height: ${pokemon.height}, type: ${pokemon.type}');
 });
 
-const heightThreshold = 70;
+// const heightThreshold = 70;
 
-for (let i=0; i < pokemonList.length; i++) {
-    var pokemonString = pokemonList[i].name + " height: " + pokemonList[i].height + "-";
-    if (pokemonList[i].height > heightThreshold) {
-        pokemonString += " Wow, that is big!";
+//for (let i=0; i < pokemonList.length; i++) {
+//    var pokemonString = pokemonList[i].name + " height: " + pokemonList[i].height + "-";
+//    if (pokemonList[i].height > heightThreshold) {
+//        pokemonString += " Wow, that is big!";
+//    }
+//    document.write(pokemonString + "<br>");
+//}
+
+var pokemonRepository = (()=> {
+    let pokemonList = [];
+
+    function getAll() {
+        return pokemonList;
     }
-    document.write(pokemonString + "<br>");
+
+function add(item) {
+    if(typeof item === 'object' && item !== null) {
+        pokemonList.push(item);
+    } else {
+        console.error( 'Pokemon incorrect');
+    }
 }
+
+return {
+    getAll: getAll,
+    add: add
+};
+})();
+
+pokemonRepository.add({name: 'Pikachu', height: 31, type: 'electric'});
+
+pokemonRepository.getAll().forEach(pokemon => {
+    console.log('name: ${pokemon.name}, height: ${pokemon.height}, type: ${pokemon.type}');
+});
