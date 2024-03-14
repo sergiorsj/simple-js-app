@@ -6,7 +6,7 @@ let pokemonRepository = (function () {
 
     function showModal(title, text) {
       let modalContainer = document.querySelector('modal-container');
-      modalContainer.innerHTML = '';
+      modalContainer.innerText = ' ';
       let modal = document.createElement('div');
         modal.classList.add('modal');
       let closeButtonElement = document.createElement('button');
