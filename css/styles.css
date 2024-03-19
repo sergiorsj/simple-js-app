@@ -59,3 +59,10 @@
     width: 80%;
   }
 }
+
+#modal-container {
+  display: none;
+}
+#modal-container.is-visible{
+  display: block;
+}
