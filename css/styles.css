@@ -1,70 +1,51 @@
-/* Modal styles */
-.modal-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 1000; /* Ensure modal is on top of other content */
-}
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Drop shadow */
-}
 
-.modal-close {
-  float: right;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  text-decoration: underline;
-  border: 0;
-  cursor: pointer;
+.row{
+  margin-top: 100px;
 }
+.list-btn{
+  text-transform: capitalize;
+  background-color: #cef2ee;
+  color: #03695b;
+  border: 1px solid #343a40;
+  font-family: 'Titan One', sans-serif;
 
-/* Button styles */
-#show-modal {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #007bff; /* Blue color */
-  color: white;
+}
+.list-group-item{
+  background-color: #f7f7f7; 
+}
+.navbar-brand{
+  font-size: 36px;
+}
+.navbar{
+  background-color: #03695b;
+  padding: 8px 24px;
+}
+.form-text{
+  line-height: 2.0px;
+  border-radius: 4px;
+  padding: 6px;
+  border: transparent;
+}
+.type-content{
+  margin: 4px 4px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color:#cef2ee ;
+  color: #03695b;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center; 
+  line-height: normal;
+  cursor: none;
 }
-
-.button-class {
-  display: block;
-  margin-bottom: 5px;
-  padding: 5px 10px;
-  background-color: #007bff; /* Blue color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.type-container{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
 }
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .modal {
-    width: 80%;
-  }
-}
-
-#modal-container {
-  display: none;
-}
-#modal-container.is-visible{
-  display: block;
+#titleModal{
+  text-transform: capitalize;
+  font-family: 'Titan One', sans-serif;
+  color: #03695b;
 }
